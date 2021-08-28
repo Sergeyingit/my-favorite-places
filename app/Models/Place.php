@@ -11,7 +11,7 @@ class Place extends Model
 
     public function tape()
     {
-        return $this->hasOne(Tape::class);
+        return $this->hasOne(Type::class);
     }
 
     public function photo()
