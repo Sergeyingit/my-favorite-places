@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Place extends Model
 {
     use HasFactory;
+
+    public function tape()
+    {
+        return $this->hasOne(Tape::class);
+    }
+
+    public function photo()
+    {
+        return $this->hasMany(Photo::class);
+    }
 }
