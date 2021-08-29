@@ -19,3 +19,5 @@ Route::get('/', function () {
 
 Route::get('/places', [PlaceController::class, 'getAllPlaces']);
 Route::get('/places/{id}', [PlaceController::class, 'getPlace'])->where('id', '[0-9]+');
+Route::get('/places/create', [PlaceController::class, 'showFormCreatePlace']);
+Route::post('/places/create', [PlaceController::class, 'createPlace']);
