@@ -11,6 +11,6 @@ class Type extends Model
 
     public function place()
     {
-        return $this->belongsTo(Place::class);
+        return $this->hasMany(Place::class);
     }
 }

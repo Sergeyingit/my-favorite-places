@@ -14,9 +14,9 @@ class TypeSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             DB::table('types')->insert([
-                'name' => 'Место' . $i,
+                'name' => 'Тип' . $i,
 
             ]);
         }
