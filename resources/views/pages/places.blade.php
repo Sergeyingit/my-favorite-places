@@ -7,7 +7,7 @@
             <div class="text-center" style="margin-top: 30px;">
                 <ul class="list-unstyled">
                     @foreach($places as $place)
-                    <li>{{$place->name}} #{{$place->type_id}}</li>
+                        <li style="padding: 10px;"><a href="/places/{{$place->id}}">{{$place->name}}</a> <span class="bg-info">#{{$place->type->name}}</span></li>
                     @endforeach
                 </ul>
             </div>
