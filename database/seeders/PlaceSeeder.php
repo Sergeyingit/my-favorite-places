@@ -14,7 +14,7 @@ class PlaceSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i <= 10; $i++) {
+        for ($i = 0; $i < 10; $i++) {
             DB::table('places')->insert([
                 'name' => 'Место' . $i,
                 'type_id' => rand(1, 10),

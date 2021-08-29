@@ -9,9 +9,9 @@ class Place extends Model
 {
     use HasFactory;
 
-    public function tape()
+    public function type()
     {
-        return $this->hasOne(Type::class);
+        return $this->belongsTo(Type::class);
     }
 
     public function photo()
