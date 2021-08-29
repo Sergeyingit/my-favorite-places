@@ -12,8 +12,16 @@ class PlaceController extends Controller
     public function getAllPlaces()
     {
         $places = Place::all();
-//        $places = Place::find(2)->type;
+//
 //        dd($places);
         return view('pages.places', compact('places'));
+    }
+
+    public function getPlace($id)
+    {
+        $place = Place::find($id);
+//
+//        dd($place->photo->name);
+        return view('pages.place', compact('place'));
     }
 }
