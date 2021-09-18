@@ -9,6 +9,8 @@ class Photo extends Model
 {
     use HasFactory;
 
+    protected $fillable = ['name', 'file', 'place_id'];
+
     public function place()
     {
         return $this->belongsTo(Place::class);
