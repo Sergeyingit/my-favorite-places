@@ -20,4 +20,14 @@ class Place extends Model
     {
         return $this->hasMany(Photo::class);
     }
+
+    public function ratings()
+    {
+        return $this->morphMany(Rating::class, 'ratingtable');
+    }
+
+    public function getRating()
+    {
+        return $this->ratings()->where('type',true)->count() - $this->ratings()->where('type', false)->count();
+    }
 }

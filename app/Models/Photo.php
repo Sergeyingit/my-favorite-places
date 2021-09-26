@@ -15,4 +15,15 @@ class Photo extends Model
     {
         return $this->belongsTo(Place::class);
     }
+
+    public function ratings()
+    {
+        return $this->morphMany(Rating::class, 'ratingtable');
+    }
+
+    public function getRating()
+    {
+
+        return $this->ratings()->where('type',true)->count() - $this->ratings()->where('type', false)->count();
+    }
 }
